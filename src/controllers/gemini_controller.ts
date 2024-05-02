@@ -8,7 +8,10 @@ const google_api_key: string = String(process.env.googleKey);
 const generative_ai = new GoogleGenerativeAI(google_api_key);
 
 class Gemini_Controller {
-  constructor() {}
+  public oldSms: [];
+  constructor() {
+    this.oldSms = [];
+  }
   public getGemini = async (request: Request, response: Response) => {
     const prompt: string = generatePrompt(request.body.prompt);
     const model = generative_ai.getGenerativeModel({
