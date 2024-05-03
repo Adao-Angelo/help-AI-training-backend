@@ -10,4 +10,4 @@
 * deve ser possivel cadastrar-se em um curso 
 * deve ser possivel enviar audio 
 * deve ser possivel conversar com professores por vidios chamada 
-* deve ser possivel
+* deve ser possivel amazenar msm 
