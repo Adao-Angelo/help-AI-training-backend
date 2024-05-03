@@ -15,7 +15,9 @@
 ## cores 
 #C1FFC1
 #ADD8E6
-#D3D3D3
+#D3D3D3 
 #FFA500
 #FFFFFF
 #000000
+
+I have found that the number of cores is very small and the number of cores is very small and the number of cores is very small and the number of cores is very small and
