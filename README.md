@@ -11,3 +11,11 @@
 * deve ser possivel enviar audio 
 * deve ser possivel conversar com professores por vidios chamada 
 * deve ser possivel amazenar msm 
+
+## cores 
+#C1FFC1
+#ADD8E6
+#D3D3D3
+#FFA500
+#FFFFFF
+#000000
