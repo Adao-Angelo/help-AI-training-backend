@@ -20,4 +20,3 @@
 #FFFFFF
 #000000
 
-I have found that the number of cores is very small and the number of cores is very small and the number of cores is very small and the number of cores is very small and
