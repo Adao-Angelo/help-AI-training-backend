@@ -1,15 +1,16 @@
 import Express, { NextFunction, Request, Response } from "express";
-import "express-async-errors";
 import cors from "cors";
+import "express-async-errors";
+
 import { router } from "./routers/index_router";
 import { AppError } from "./errors/appErros";
 
 const app = Express();
-
+app.use(cors());
 app.use(Express.json());
 app.use(router);
-app.use(cors());
-//error_handling_config
+
+//_________error_handling_config_________
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof AppError) {
@@ -25,4 +26,4 @@ app.use(
   }
 );
 
-app.listen(9000, () => console.log("Server listening"));
+app.listen(8000, () => console.log("Server listening"));
