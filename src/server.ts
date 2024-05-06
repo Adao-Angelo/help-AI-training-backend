@@ -1,5 +1,6 @@
 import Express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
+import cors from "cors";
 import { router } from "./routers/index_router";
 import { AppError } from "./errors/appErros";
 
@@ -7,7 +8,7 @@ const app = Express();
 
 app.use(Express.json());
 app.use(router);
-
+app.use(cors());
 //error_handling_config
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
