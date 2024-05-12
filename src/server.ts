@@ -1,6 +1,7 @@
 import Express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import "express-async-errors";
+import "./configuration/socket.io/io";
 
 import { router } from "./routers/index_router";
 import { AppError } from "./errors/appErros";

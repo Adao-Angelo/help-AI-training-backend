@@ -12,8 +12,8 @@ class Gemini_Controller {
   constructor() {
     this.oldSms = [];
   }
-  public getGemini = async (request: Request, response: Response) => {
-    const prompt: string = generatePrompt(request.body.prompt);
+  public getGemini = async (messages: string) => {
+    const prompt: string = generatePrompt(messages);
     const model = generative_ai.getGenerativeModel({
       model: "gemini-pro",
     });
@@ -21,10 +21,11 @@ class Gemini_Controller {
     const result = await model.generateContent(prompt);
     const message = result.response;
     const text = message.text();
-    return response.status(200).json({
+    return {
       status: "success",
       message: text,
-    });
+      name: "Gemini",
+    };
   };
 }
 
