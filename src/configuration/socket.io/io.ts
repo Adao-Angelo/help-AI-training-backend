@@ -6,7 +6,6 @@ io.on("connection", (socket) => {
 
   socket.on("message", async (message) => {
     const result = await gemini_controller.getGemini(message.text);
-
     socket.emit("gemini", result);
   });
 
