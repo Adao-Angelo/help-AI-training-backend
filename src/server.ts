@@ -1,7 +1,7 @@
 import Express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import "express-async-errors";
-import "./configuration/socket.io/io";
+import "./configuration/socket.io/server_websocket";
 
 import { router } from "./routers/index_router";
 import { AppError } from "./errors/appErros";
@@ -27,4 +27,4 @@ app.use(
   }
 );
 
-app.listen(8000, () => console.log("Server listening"));
+app.listen(8000, () => console.log("API: 8000"));

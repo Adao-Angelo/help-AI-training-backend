@@ -29,4 +29,4 @@ class Gemini_Controller {
   };
 }
 
-export { Gemini_Controller };
+export default new Gemini_Controller();
