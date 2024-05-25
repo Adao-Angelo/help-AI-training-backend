@@ -1,6 +1,6 @@
 import multer from "multer";
 import path from "path";
-import { AppError } from "../errors/appErros";
+import { AppError } from "../errors/appError";
 
 export const storage = multer.diskStorage({
   destination: (req, file, callback) => {

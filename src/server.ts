@@ -1,17 +1,14 @@
 import Express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import "express-async-errors";
-import "./configuration/socket.io/server_websocket";
-
-import { router } from "./routers/index_router";
-import { AppError } from "./errors/appErros";
+import "./configuration/webSocketServer/server_websocket";
+import { AppError } from "./errors/appError";
 
 const app = Express();
 app.use(cors());
 app.use(Express.json());
-app.use(router);
 
-//_________error_handling_config_________
+/*_________error_handling_config_________*/
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof AppError) {
@@ -27,4 +24,4 @@ app.use(
   }
 );
 
-app.listen(8000, () => console.log("API: 8000"));
+app.listen(8000);
