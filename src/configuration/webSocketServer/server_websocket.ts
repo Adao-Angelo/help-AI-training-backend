@@ -39,9 +39,6 @@ io.on("connection", (socket) => {
   socket.join("home");
   socket.on("send", async (message) => {
     socket.emit("received", message);
-
-    socket.emit("loading", "loading");
-
     const result = await gemini_controller.getGemini(message.text);
     const filter = {
       text: result.message,
