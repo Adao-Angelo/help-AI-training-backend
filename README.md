@@ -19,8 +19,10 @@ npm run dev
 
 ###  Folder architectures
 <b> /src/errors/ </b>
+
 In this path there is a file responsible for handling errors on the server
 
 <b> /src/configuration/webSocketServer/ </b>
+
 In this path there are files responsible for the web socket server   
 and the socket.io configurations
